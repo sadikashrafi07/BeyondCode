@@ -5,7 +5,7 @@ function About() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-48 mb-24 w-5/6 m-auto" id="home">
       <div className="w-full h-420 flex items-center justify-center">
-        <div className="w-275 h-340 bg-emerald-200 rounded-md relative">
+        <div className="w-275 h-340 bg-blue-600 rounded-md relative">
           <img className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg shadow-lg" src={pic} alt="" />
         </div>
       </div>

@@ -10,7 +10,7 @@ function Timeline() {
 
   return (
     <section className="w-full flex flex-col items-center justify-center" id="experience">
-      <p className="text-xl font-semibold text-gray-300 uppercase tracking-wide mb-2">Timeline</p>
+      <p className="text-base font-semibold text-gray-300 uppercase mb-2" style={{ letterSpacing: "0.2em", fontFamily: "Avenir Next" }}>Timeline</p>
       <h2 className="text-4xl font-bold text-white mb-4">My journey so far</h2>
       <p className="text-base text-gray-400 text-center max-w-2xl mx-auto mb-10 md:whitespace-nowrap">All my academic and professional experience with some milestones achieved are summed up here:</p>
       <VerticalTimeline>
