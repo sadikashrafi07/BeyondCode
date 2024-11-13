@@ -21,19 +21,87 @@ function ProjectsComponent() {
         Some of the projects in my portfolio that I worked on .....
       </p>
 
-      {/* Grid layout for projects */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-8 lg:px-16">
-        {Projects && Projects.map((n) => (
-          <div key={n.id} className="border border-gray-700 rounded-md p-4 flex flex-col hover:border-gray-500 duration-100 ease-in-out">
-            <p className="text-sm text-white font-semibold uppercase mb-2">{n.name}</p>
-            <img src={n.imageSrc} className="w-full h-48 object-cover rounded-md mb-4" alt="" />
+      {/* Custom Grid Layout for Projects */}
+      <div
+        className="grid gap-6 w-full px-20 lg:px-40"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateAreas: `
+            "a a b"
+            "a a c"
+            "d e f"
+          `,
+        }}
+      >
+        {/* First grid item (large, spans two rows) */}
+        <div
+          style={{ gridArea: "a" }}
+          className="border border-gray-700 rounded-2xl p-4 flex flex-col duration-100 ease-in-out h-full relative overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow"
+        >
+          <p className="text-lg text-white font-semibold uppercase mb-4">{Projects[0].name}</p>
+          <div className="relative w-full h-full">
+            <img
+              src={Projects[0].imageSrc}
+              className="w-full h-full object-contain mb-4"
+              alt={Projects[0].name}
+            />
+            <a
+              href={Projects[0].github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 bg-blue-600 opacity-0 hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center"
+            >
+              <p className="text-2xl text-white font-bold tracking-wider drop-shadow-lg">
+                Tap to View
+              </p>
+            </a>
+          </div>
+          <div className="flex flex-col items-start justify-between w-full mt-auto">
+            <p className="text-lg text-gray-300 mb-2">Technologies</p>
+            <div className="flex items-center justify-between w-full">
+              <span className="block text-base text-gray-400 break-words max-w-full">{Projects[0].techs}</span>
+              <a href={Projects[0].github} target="_blank" rel="noopener noreferrer" className="flex items-center ml-auto">
+                <motion.div whileTap={{ scale: 0.8 }}>
+                  <IoLogoGithub className="text-white text-3xl cursor-pointer" />
+                </motion.div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional grid items with hover effect */}
+        {[Projects[1], Projects[2], ...Projects.slice(3, 6)].map((project, index) => (
+          <div
+            key={project.id}
+            style={{ gridArea: `b c d e f`.split(" ")[index] }}
+            className="border border-gray-700 rounded-2xl p-4 flex flex-col duration-100 ease-in-out relative overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow"
+          >
+            <p className="text-lg text-white font-semibold uppercase mb-4">{project.name}</p>
+            <div className="relative w-full h-48">
+              <img
+                src={project.imageSrc}
+                className="w-full h-full object-cover mb-4 transition-transform duration-300 hover:scale-105"
+                alt={project.name}
+              />
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 bg-blue-600 opacity-0 hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center"
+              >
+                <p className="text-2xl text-white font-bold tracking-wider drop-shadow-lg">
+                  Tap to View
+                </p>
+              </a>
+            </div>
             <div className="flex flex-col items-start justify-between w-full">
-              <p className="text-sm text-gray-400 mb-1">Technologies</p>
+              <p className="text-lg text-gray-300 mb-2">Technologies</p>
               <div className="flex items-center justify-between w-full">
-                <span className="block text-xs text-gray-500 break-words max-w-full">{n.techs}</span>
-                <a href={n.github} target="_blank" rel="noopener noreferrer" className="flex items-center ml-auto">
+                <span className="block text-base text-gray-400 break-words max-w-full">{project.techs}</span>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center ml-auto">
                   <motion.div whileTap={{ scale: 0.8 }}>
-                    <IoLogoGithub className="text-white text-2xl cursor-pointer" />
+                    <IoLogoGithub className="text-white text-3xl cursor-pointer" />
                   </motion.div>
                 </a>
               </div>

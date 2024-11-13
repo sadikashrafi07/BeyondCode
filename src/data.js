@@ -39,17 +39,17 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
-    name: "ShareUp",
-    imageSrc: img7,
-    techs: "Python, Django, Bootstrap, SQLite, Amazon S3",
-    github: "https://github.com/sadikashrafi07/ShareUp",
-  },
-  {
-    id: 2,
     name: "Resume Insight Pro",
     imageSrc: img2,
     techs: "Python, Streamlit, Html, Css, Crew AI, gpt-4-0125-preview, LinguaLogic, EC2, Web3 Forms",
     github: "https://github.com/sadikashrafi07/Resume-Insight-Pro",
+  },
+  {
+    id: 2,
+    name: "ShareUp",
+    imageSrc: img7,
+    techs: "Python, Django, Bootstrap, SQLite, Amazon S3",
+    github: "https://github.com/sadikashrafi07/ShareUp",
   },
   {
     id: 3,
