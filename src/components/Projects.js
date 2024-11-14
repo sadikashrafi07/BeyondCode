@@ -14,10 +14,10 @@ function ProjectsComponent() {
       </p>
       
       {/* Main Heading */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">My Projects</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">My Projects</h1>
       
       {/* Subheading Description */}
-      <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-10">
+      <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-10 md:whitespace-nowrap">
         Some of the projects in my portfolio that I worked on .....
       </p>
 
