@@ -2,9 +2,10 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Timeline from "./components/Timeline";
 import ProjectsComponent from "./components/Projects";
+import Skills from "./components/Skills"; 
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ScrollToTopButton from "./components/ScrollToTopButton"; // Import the Scroll-to-Top Button
+import ScrollToTopButton from "./components/ScrollToTopButton"; 
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
         <About />
         <Timeline />
         <ProjectsComponent />
+        <Skills /> 
         <Contact />
       </main>
       <Footer />
-      <ScrollToTopButton /> {/* Add the Scroll-to-Top Button */}
+      <ScrollToTopButton /> 
     </div>
   );
 }

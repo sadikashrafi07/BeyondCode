@@ -9,10 +9,12 @@ function Timeline() {
   const timelineIcons = [img1, img2, img3];
 
   return (
-    <section className="w-full flex flex-col items-center justify-center" id="experience">
-      <p className="text-base font-semibold text-gray-300 uppercase mb-2" style={{ letterSpacing: "0.2em", fontFamily: "Avenir Next" }}>Timeline</p>
-      <h2 className="text-4xl font-bold text-white mb-4">My journey so far</h2>
-      <p className="text-base text-gray-400 text-center max-w-2xl mx-auto mb-10 md:whitespace-nowrap">All my academic and professional experience with some milestones achieved are summed up here:</p>
+    <section className="w-full flex flex-col items-center justify-center my-24 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-40" id="experience">
+      <p className="text-sm sm:text-base font-semibold text-gray-300 uppercase mb-2" style={{ letterSpacing: "0.2em", fontFamily: "Avenir Next" }}>Timeline</p>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">My journey so far</h2>
+      <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-10 md:whitespace-nowrap">
+        All my academic and professional experience with some milestones achieved are summed up here:
+      </p>
       <VerticalTimeline>
         {Experience && Experience.map((n, index) => (
           <VerticalTimelineElement
@@ -25,7 +27,7 @@ function Timeline() {
               padding: "20px",
             }}
             contentArrowStyle={{ borderRight: "7px solid #f5f7fa" }}
-            date={<span className="text-sm text-gray-400 font-semibold">{n.date}</span>}
+            date={<span className="text-xs sm:text-sm text-gray-400 font-semibold">{n.date}</span>}
             icon={<img src={timelineIcons[index % timelineIcons.length]} alt="icon" className="w-full h-full rounded-full" />}
             iconStyle={{
               background: "#e5e5e5",
@@ -33,9 +35,9 @@ function Timeline() {
               border: "2px solid #ccc",
             }}
           >
-            <h3 className="vertical-timeline-element-title text-lg font-semibold text-blue-500">{n.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle text-md font-medium text-gray-600 mb-2">{n.location}</h4>
-            <p className="text-gray-600 text-sm">{n.description}</p>
+            <h3 className="vertical-timeline-element-title text-lg sm:text-xl font-semibold text-blue-500">{n.title}</h3>
+            <h4 className="vertical-timeline-element-subtitle text-md sm:text-lg font-medium text-gray-600 mb-2">{n.location}</h4>
+            <p className="text-gray-600 text-sm sm:text-base">{n.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
