@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -8,7 +8,8 @@ function Navbar() {
 
   return (
     <nav className="w-full px-6 z-50 inset-x-0 top-2 flex justify-center bg-primary">
-      <div className="w-full md:w-880 bg-navBar p-4 rounded-2xl flex fixed items-center">
+      {/* Set width to a responsive percentage for medium screens */}
+      <div className="w-full md:w-3/4 lg:w-880 bg-navBar p-4 rounded-2xl flex fixed items-center">
         <p className="text-lg text-slate-200 font-medium">AMS</p>
 
         <div className="hidden md:flex items-center gap-6 ml-6 flex-1">
