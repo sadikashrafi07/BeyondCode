@@ -31,3 +31,10 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+/* index.css */
+@media (max-width: 639px) {
+  .top-negative-small {
+    top: -1.5rem; 
+  }
+}
+
