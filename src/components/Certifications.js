@@ -38,7 +38,7 @@ const CertificationsComponent = () => {
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
         Learnings and Earnings
       </h2>
-      <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-[-0.5rem] sm:mb-4 md:whitespace-nowrap"
+      <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto mb-[-2rem] sm:mb-4 md:whitespace-nowrap"
       >
         A collection of milestones that reflect my dedication to continuous learning and professional growth:
       </p>
