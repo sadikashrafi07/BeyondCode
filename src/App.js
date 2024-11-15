@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Skills from "./components/Skills"; // Import Skills component
+import Skills from "./components/Skills"; 
 import Timeline from "./components/Timeline";
 import ProjectsComponent from "./components/Projects";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton"; 
@@ -17,6 +18,7 @@ function App() {
         <Skills /> 
         <Timeline />
         <ProjectsComponent />
+        <Certifications />
         <Contact />
       </main>
       <Footer />

@@ -7,6 +7,13 @@ import img4 from "./images/AERS.png";
 import img6 from "./images/Artimacy.png";
 import img7 from "./images/ShareUp.png";
 
+// Certification Images
+import azureAiAssociate from "./images/Azure AI Associate.jpg";
+import azureAiFundamentals from "./images/Azure AI Fundamentals.png";
+import mlSpecialization from "./images/Machine Learning Specialization.jpg";
+import msDataAnalysis from "./images/Microsoft Data Analysis.jpg";
+import pythonCertificate from "./images/Python Certificate(Futerense).jpg";
+
 export const Experience = [
   {
     id: 1,
@@ -99,5 +106,49 @@ export const SocialLinks = [
     icon: "IoLogoLinkedin",
     name: "LinkedIn",
     link: "http://linkedin.com/in/angadi-mohammad-sadiq",
+  },
+];
+
+
+export const Certifications = [
+  {
+    id: 1,
+    name: "Azure AI Engineer Associate",
+    organization: "Microsoft",
+    issueDate: "June 30, 2024",
+    credential: "https://shorturl.at/p77Pm",
+    imageSrc: azureAiAssociate,
+  },
+  {
+    id: 2,
+    name: "Machine Learning Specialization",
+    organization: "Stanford Online",
+    issueDate: "August 15, 2023",
+    credential: "https://www.coursera.org/account/accomplishments/specialization/5ZYR8DFW3URU",
+    imageSrc: mlSpecialization,
+  },
+  {
+    id: 3,
+    name: "Azure AI Fundamentals",
+    organization: "Microsoft",
+    issueDate: "March 23, 2024",
+    credential: "https://lnkd.in/g4GXf7kU",
+    imageSrc: azureAiFundamentals,
+  },
+  {
+    id: 4,
+    name: "Python Programming",
+    organization: "Futerense Technologies Pvt. Ltd",
+    issueDate: "Nov 25, 2023",
+    credential: "https://drive.google.com/file/d/13NDjPu_AHZOCwm8CCw4KL17In3grB-hZ/view?usp=sharing",
+    imageSrc: pythonCertificate,
+  },
+  {
+    id: 5,
+    name: "Data Analysis with Microsoft Excel",
+    organization: "Coursera",
+    issueDate: "November 15, 2024",
+    credential: "https://www.coursera.org/account/accomplishments/verify/FAFRANN9CULN",
+    imageSrc: msDataAnalysis,
   },
 ];
